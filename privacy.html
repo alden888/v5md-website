@@ -3,22 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="V5 Medical LTD Privacy Policy - We are committed to protecting your privacy and personal data.">
-    <meta name="keywords" content="privacy policy, medical supplier, data protection, V5 Medical">
+    <meta name="description" content="V5 Medical LTD Privacy Policy - We are committed to protecting your privacy and personal information.">
+    <meta name="keywords" content="privacy policy, V5 Medical, medical supplier, data protection">
     <meta name="author" content="V5 Medical LTD">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="V5 Medical LTD Privacy Policy">
-    <meta property="og:description" content="Our commitment to protecting your privacy and personal data.">
+    <meta property="og:title" content="V5 Medical LTD - Privacy Policy">
+    <meta property="og:description" content="V5 Medical LTD Privacy Policy - We are committed to protecting your privacy and personal information.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://v5md.com/privacy.html">
     <meta property="og:image" content="https://v5md.com/v5medlogo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="V5 Medical LTD">
     <meta property="og:locale" content="en_US">
 
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@v5med">
+    <meta name="twitter:title" content="V5 Medical LTD - Privacy Policy">
+    <meta name="twitter:description" content="V5 Medical LTD Privacy Policy - We are committed to protecting your privacy and personal information.">
+    <meta name="twitter:image" content="https://v5md.com/v5medlogo.png">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="v5logo.png" as="image">
+    <link rel="preload" href="v5medlogo.png" as="image">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://v5md.com/privacy.html">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "V5 Medical LTD",
+      "legalName": "SUZHOU V5 MEDICAL TECHNOLOGY CO., LTD.",
+      "url": "https://v5md.com",
+      "logo": "https://v5md.com/v5logo.png",
+      "description": "Professional Global Medical Consumables Supplier - ISO/CE/FDA certified medical devices",
+      "telephone": "+86-512-8781-1988",
+      "email": "sales@v5md.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 168, Luying Road, Kunshan Development Zone",
+        "addressLocality": "Kunshan",
+        "addressRegion": "Jiangsu",
+        "postalCode": "215300",
+        "addressCountry": "CN"
+      }
+    }
+    </script>
     <title>V5 Medical LTD - Privacy Policy</title>
-    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -28,60 +65,7 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Google Translate -->
-    <div id="google_translate_element" class="fixed top-4 right-4 z-50"></div>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,zh-CN,ar,es,fr,ru',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JE15YSMC2W"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-JE15YSMC2W', {
-            'page_title': document.title,
-            'page_path': window.location.pathname,
-            'anonymize_ip': true,
-            'cookie_expires': 2592000
-        });
-
-        function trackNavigationClick(sectionName) {
-            gtag('event', 'navigation_click', {
-                'section': sectionName,
-                'event_category': 'Navigation',
-                'event_label': 'Navigate to ' + sectionName
-            });
-        }
-
-        function trackPDFDownload(pdfName) {
-            gtag('event', 'download', {
-                'file_name': pdfName,
-                'file_type': 'pdf',
-                'event_category': 'Downloads',
-                'event_label': pdfName
-            });
-        }
-
-        function trackWhatsAppClick() {
-            gtag('event', 'whatsapp_click', {
-                'event_category': 'Contact',
-                'event_label': 'WhatsApp Contact'
-            });
-        }
-    </script>
-    
     <!-- Tailwind Config -->
     <script>
         tailwind.config = {
@@ -108,12 +92,123 @@
             .content-auto {
                 content-visibility: auto;
             }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            }
+            .whatsapp-float {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                background: #25D366;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 50px;
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+                z-index: 1000;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .whatsapp-float:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            }
             .nav-scrolled {
                 background: white;
                 box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             }
             .smooth-scroll {
                 scroll-behavior: smooth;
+            }
+            
+            /* Loading Animation */
+            .page-loader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 9999;
+                transition: opacity 0.5s ease-out;
+            }
+            
+            .page-loader.hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+            
+            .loader-spinner {
+                width: 50px;
+                height: 50px;
+                border: 5px solid rgba(255,255,255,0.3);
+                border-top-color: white;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+            
+            @keyframes spin {
+                to { transform: rotate(360deg); }
+            }
+            
+            /* Back to Top Button */
+            .back-to-top {
+                position: fixed;
+                bottom: 100px;
+                right: 30px;
+                background: #1e40af;
+                color: white;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+                z-index: 1000;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                border: none;
+            }
+            
+            .back-to-top.show {
+                opacity: 1;
+                pointer-events: auto;
+            }
+            
+            .back-to-top:hover {
+                transform: scale(1.1);
+                background: #1e3a8a;
+            }
+            
+            /* Mobile optimization */
+            @media (max-width: 768px) {
+                .whatsapp-float {
+                    bottom: 20px;
+                    right: 20px;
+                    padding: 12px;
+                    border-radius: 50%;
+                }
+                .whatsapp-float span {
+                    display: none;
+                }
+                .back-to-top {
+                    bottom: 80px;
+                    right: 20px;
+                    width: 45px;
+                    height: 45px;
+                }
             }
         }
         .goog-te-gadget-simple {
@@ -126,10 +221,93 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
         }
         .goog-te-gadget-simple img { display: none !important; }
+        
+        /* Privacy Policy specific styles */
+        .privacy-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .privacy-heading {
+            color: #1e40af;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-subheading {
+            color: #1e3a8a;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .privacy-list {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .policy-date {
+            background-color: #eff6ff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
     </style>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JE15YSMC2W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JE15YSMC2W', {
+            'page_title': document.title,
+            'page_path': window.location.pathname,
+            'anonymize_ip': true,
+            'cookie_expires': 2592000,
+            'custom_map': {
+                'dimension1': 'user_type',
+                'metric1': 'page_load_time'
+            }
+        });
+
+        function trackNavigationClick(sectionName) {
+            gtag('event', 'navigation_click', {
+                'section': sectionName,
+                'event_category': 'Navigation',
+                'event_label': 'Navigate to ' + sectionName
+            });
+        }
+
+        function trackPDFDownload(pdfName) {
+            gtag('event', 'download', {
+                'file_name': pdfName,
+                'file_type': 'pdf',
+                'event_category': 'Downloads',
+                'event_label': pdfName
+            });
+        }
+
+        function trackWhatsAppClick() {
+            gtag('event', 'whatsapp_click', {
+                'event_category': 'Contact',
+                'event_label': 'WhatsApp Contact'
+            });
+        }
+    </script>
 </head>
 <body class="smooth-scroll font-sans bg-gray-50">
-    
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>  
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-blue-900/90">
         <div class="max-w-7xl mx-auto px-4">
@@ -144,7 +322,7 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html#home" class="nav-link font-semibold text-blue-100 hover:text-white transition" onclick="trackNavigationClick('Home')">Home</a>
+                    <a href="index.html" class="nav-link font-semibold text-blue-100 hover:text-white transition" onclick="trackNavigationClick('Home')">Home</a>
                     <a href="index.html#about" class="nav-link font-semibold text-blue-100 hover:text-white transition" onclick="trackNavigationClick('About Us')">About Us</a>
                     <a href="index.html#products" class="nav-link font-semibold text-blue-100 hover:text-white transition" onclick="trackNavigationClick('Products')">Products</a>
                     <a href="index.html#contact" class="nav-link font-semibold text-blue-100 hover:text-white transition" onclick="trackNavigationClick('Contact')">Contact</a>
@@ -164,7 +342,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-4 py-4 space-y-3">
-                <a href="index.html#home" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600" onclick="trackNavigationClick('Home')">Home</a>
+                <a href="index.html" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600" onclick="trackNavigationClick('Home')">Home</a>
                 <a href="index.html#about" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600" onclick="trackNavigationClick('About Us')">About Us</a>
                 <a href="index.html#products" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600" onclick="trackNavigationClick('Products')">Products</a>
                 <a href="index.html#contact" class="block px-4 py-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600" onclick="trackNavigationClick('Contact')">Contact</a>
@@ -176,453 +354,207 @@
         </div>
     </nav>
 
-    <!-- Privacy Policy Hero -->
-    <section class="pt-32 pb-16 px-4 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Privacy Policy</h1>
-            <p class="text-xl text-blue-100 mb-8">Last Updated: December 9, 2024</p>
-            <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm">
-                <p class="text-lg">At V5 Medical LTD, we are committed to protecting your privacy and personal data. This policy explains how we collect, use, and protect your information when you visit our website or do business with us.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Privacy Policy Content -->
-    <section class="py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-                <!-- Table of Contents -->
-                <div class="mb-12 bg-blue-50 p-6 rounded-xl">
-                    <h2 class="text-2xl font-bold text-blue-900 mb-4">Table of Contents</h2>
-                    <ul class="space-y-2">
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#introduction" class="text-blue-700 hover:text-blue-900 transition">Introduction</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#information-we-collect" class="text-blue-700 hover:text-blue-900 transition">Information We Collect</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#how-we-use-your-information" class="text-blue-700 hover:text-blue-900 transition">How We Use Your Information</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#cookies-and-tracking" class="text-blue-700 hover:text-blue-900 transition">Cookies and Tracking</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#third-party-services" class="text-blue-700 hover:text-blue-900 transition">Third-Party Services</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#data-security" class="text-blue-700 hover:text-blue-900 transition">Data Security</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#your-rights" class="text-blue-700 hover:text-blue-900 transition">Your Rights</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#changes-to-this-policy" class="text-blue-700 hover:text-blue-900 transition">Changes to This Policy</a>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-blue-500 text-sm"></i>
-                            <a href="#contact-us" class="text-blue-700 hover:text-blue-900 transition">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Introduction -->
-                <div id="introduction" class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-info-circle text-blue-600"></i>
-                        Introduction
-                    </h2>
-                    <p class="text-gray-700 mb-4">V5 Medical LTD ("we", "us", or "our") operates the website <a href="https://v5md.com" class="text-blue-600 hover:text-blue-800">https://v5md.com</a> (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site or do business with us.</p>
-                    <p class="text-gray-700">By using our Site, you consent to our Privacy Policy and agree to its terms. If you do not agree with our practices, please do not use our Site.</p>
-                </div>
-
-                <!-- Information We Collect -->
-                <div id="information-we-collect" class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-database text-blue-600"></i>
-                        Information We Collect
-                    </h2>
-                    
-                    <div class="bg-gray-50 p-6 rounded-xl mb-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Personal Information</h3>
-                        <p class="text-gray-700 mb-4">We may collect personal information that you voluntarily provide to us when you:</p>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Submit an inquiry through our contact form</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Request product information or samples</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Subscribe to our newsletter or updates</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Participate in surveys or promotions</span>
-                            </li>
-                        </ul>
-                        <p class="text-gray-700 mt-4">This information may include your name, company name, email address, phone number, job title, and other contact details.</p>
-                    </div>
-
-                    <div class="bg-gray-50 p-6 rounded-xl">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Automatically Collected Information</h3>
-                        <p class="text-gray-700 mb-4">When you visit our Site, we may automatically collect certain information about your device and usage patterns, including:</p>
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>IP address (anonymized)</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Browser type and version</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Operating system</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Referring URLs</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Pages visited and time spent on pages</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Device information (e.g., mobile or desktop)</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-check-circle text-blue-500 mt-1"></i>
-                                <span>Click patterns and interactions with the Site</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- How We Use Your Information -->
-                <div id="how-we-use-your-information" class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-cog text-blue-600"></i>
-                        How We Use Your Information
-                    </h2>
-                    
-                    <p class="text-gray-700 mb-6">We use the information we collect for the following purposes:</p>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-blue-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-envelope text-blue-600"></i>
-                                Communication
-                            </h3>
-                            <p class="text-gray-700">To respond to your inquiries, provide information about our products and services, and communicate with you about your orders or requests.</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-shopping-cart text-blue-600"></i>
-                                Business Operations
-                            </h3>
-                            <p class="text-gray-700">To process orders, provide customer support, and manage our business relationship with you.</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-chart-line text-blue-600"></i>
-                                Website Improvement
-                            </h3>
-                            <p class="text-gray-700">To analyze how visitors use our Site, improve our website design and functionality, and enhance the user experience.</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-shield-alt text-blue-600"></i>
-                                Security
-                            </h3>
-                            <p class="text-gray-700">To detect, prevent, and address technical issues, fraud, or security breaches.</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-6 rounded-xl md:col-span-2">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-chart-bar text-blue-600"></i>
-                                Analytics and Reporting
-                            </h3>
-                            <p class="text-gray-700">To understand user behavior, measure website performance, and optimize our marketing efforts using Google Analytics.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cookies and Tracking -->
-                <div id="cookies-and-tracking" class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-cookie text-blue-600"></i>
-                        Cookies and Tracking
-                    </h2>
-                    
-                    <div class="bg-gray-50 p-6 rounded-xl mb-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">What Are Cookies?</h3>
-                        <p class="text-gray-700 mb-4">Cookies are small text files that are stored on your device when you visit a website. They help websites recognize your device and remember information about your visit.</p>
-                        
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Types of Cookies We Use</h3>
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-cookie-bite text-blue-500 mt-1"></i>
-                                <div>
-                                    <span class="font-semibold">Necessary Cookies:</span> These cookies are essential for the website to function properly. They enable basic functions like page navigation and access to secure areas.
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-cookie-bite text-blue-500 mt-1"></i>
-                                <div>
-                                    <span class="font-semibold">Performance Cookies:</span> These cookies collect information about how visitors use our website, such as which pages are visited most often. We use Google Analytics for this purpose.
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-cookie-bite text-blue-500 mt-1"></i>
-                                <div>
-                                    <span class="font-semibold">Functionality Cookies:</span> These cookies allow the website to remember choices you make (like language preference) and provide enhanced features.
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-blue-50 p-6 rounded-xl">
-                        <h3 class="text-xl font-semibold text-blue-900 mb-4">Managing Cookies</h3>
-                        <p class="text-gray-700 mb-4">You can control and manage cookies in your browser settings. Most browsers allow you to refuse or delete cookies. However, please note that disabling cookies may affect the functionality of our website.</p>
-                        <p class="text-gray-700">For more information on how to manage cookies, visit your browser's help documentation or <a href="https://www.aboutcookies.org" class="text-blue-600 hover:text-blue-800" target="_blank">www.aboutcookies.org</a>.</p>
-                    </div>
-                </div>
-
-                <!-- Third-Party Services -->
-                <div id="third-party-services" class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-handshake text-blue-600"></i>
-                        Third-Party Services
-                    </h2>
-                    
-                    <p class="text-gray-700 mb-6">We may use third-party service providers to help us operate our website and conduct our business. These third parties may have access to your personal information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-gray-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-globe text-blue-600"></i>
-                                Google Translate
-                            </h3>
-                            <p class="text-gray-700">We use Google Translate to provide multilingual support on our website. Google's privacy policy applies to the use of this service.</p>
-                        </div>
-                        
-                        <div class="bg-gray-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-chart-line text-blue-600"></i>
-                                Google Analytics
-                            </h3>
-                            <p class="text-gray-700">We use Google Analytics (ID: G-JE15YSMC2W) to analyze website traffic and user behavior. Google Analytics uses cookies to collect anonymous information about how visitors use our site. We have enabled IP anonymization to ensure compliance with data protection regulations.</p>
-                        </div>
-                        
-                        <div class="bg-gray-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-paper-plane text-blue-600"></i>
-                                Formspree
-                            </h3>
-                            <p class="text-gray-700">We use Formspree to process contact form submissions. Formspree's privacy policy applies to the handling of your form data.</p>
-                        </div>
-                        
-                        <div class="bg-gray-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                                <i class="fab fa-whatsapp text-green-500"></i>
-                                WhatsApp
-                            </h3>
-                            <p class="text-gray-700">We provide WhatsApp contact links for direct communication. WhatsApp's privacy policy applies to these communications.</p>
-                        </div>
-                        
-                        <div class="bg-gray-50 p-6 rounded-xl md:col-span-2">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-cloud text-blue-600"></i>
-                                Cloud Storage
-                            </h3>
-                            <p class="text-gray-700">We use cloud storage services to host our product catalogs and other documents. These providers have their own privacy policies.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Security -->
-                <div id="data-security" class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-lock text-blue-600"></i>
-                        Data Security
-                    </h2>
-                    
-                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl">
-                        <p class="text-gray-700 mb-6">We take the security of your personal information seriously and implement appropriate technical and organizational measures to protect it from unauthorized access, disclosure, alteration, or destruction.</p>
-                        
-                        <div class="grid md:grid-cols-3 gap-6">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
-                                </div>
-                                <h3 class="font-semibold text-gray-900 mb-2">Secure Storage</h3>
-                                <p class="text-sm text-gray-700">Personal data is stored on secure servers with restricted access.</p>
-                            </div>
-                            
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-user-shield text-2xl text-blue-600"></i>
-                                </div>
-                                <h3 class="font-semibold text-gray-900 mb-2">Access Control</h3>
-                                <p class="text-sm text-gray-700">Only authorized personnel have access to your information.</p>
-                            </div>
-                            
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-sync-alt text-2xl text-blue-600"></i>
-                                </div>
-                                <h3 class="font-semibold text-gray-900 mb-2">Regular Updates</h3>
-                                <p class="text-sm text-gray-700">Security measures are regularly reviewed and updated.</p>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-700 mt-6 text-sm italic">While we strive to protect your personal information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security.</p>
-                    </div>
-                </div>
-
-                <!-- Your Rights -->
-                <div id="your-rights" class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-balance-scale text-blue-600"></i>
-                        Your Rights
-                    </h2>
-                    
-                    <p class="text-gray-700 mb-6">Depending on your location, you may have certain rights regarding your personal information under applicable data protection laws, including:</p>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-blue-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-eye text-blue-600"></i>
-                                Right to Access
-                            </h3>
-                            <p class="text-gray-700">You have the right to request access to the personal information we hold about you.</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-edit text-blue-600"></i>
-                                Right to Correction
-                            </h3>
-                            <p class="text-gray-700">You have the right to request correction of inaccurate personal information.</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-trash text-blue-600"></i>
-                                Right to Erasure
-                            </h3>
-                            <p class="text-gray-700">You may request deletion of your personal information under certain circumstances.</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-6 rounded-xl">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-ban text-blue-600"></i>
-                                Right to Restriction
-                            </h3>
-                            <p class="text-gray-700">You may request restriction of processing of your personal information.</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-6 rounded-xl md:col-span-2">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-3 flex items-center gap-2">
-                                <i class="fas fa-exchange-alt text-blue-600"></i>
-                                Right to Data Portability
-                            </h3>
-                            <p class="text-gray-700">You may request to receive your personal information in a structured, commonly used, and machine-readable format.</p>
-                        </div>
-                    </div>
-                    
-                    <p class="text-gray-700 mt-6">To exercise any of these rights, please contact us using the information provided below.</p>
-                </div>
-
-                <!-- Changes to This Policy -->
-                <div id="changes-to-this-policy" class="mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-history text-blue-600"></i>
-                        Changes to This Policy
-                    </h2>
-                    
-                    <div class="bg-gray-50 p-6 rounded-xl">
-                        <p class="text-gray-700 mb-4">We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-                        <p class="text-gray-700 mb-4">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-                        <p class="text-gray-700 font-semibold">Last Updated: December 9, 2024</p>
-                    </div>
-                </div>
-
-                <!-- Contact Us -->
-                <div id="contact-us">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                        <i class="fas fa-envelope text-blue-600"></i>
-                        Contact Us
-                    </h2>
-                    
-                    <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-8 rounded-xl">
-                        <p class="text-lg mb-6">If you have any questions about this Privacy Policy, please contact us:</p>
-                        
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div>
-                                <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
-                                    <i class="fas fa-building"></i>
-                                    V5 Medical LTD
-                                </h3>
-                                <p class="mb-4 flex items-start gap-2">
-                                    <i class="fas fa-map-marker-alt mt-1"></i>
-                                    <span>No. 168, Luying Road, Kunshan Development Zone, Jiangsu, China</span>
-                                </p>
-                                <p class="mb-4 flex items-center gap-2">
-                                    <i class="fas fa-phone"></i>
-                                    <span>+86-512 8781 1988</span>
-                                </p>
-                            </div>
-                            
-                            <div>
-                                <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
-                                    <i class="fas fa-envelope"></i>
-                                    Privacy Inquiries
-                                </h3>
-                                <p class="mb-4 flex items-center gap-2">
-                                    <i class="fas fa-at"></i>
-                                    <span>privacy@v5md.com</span>
-                                </p>
-                                <p class="mb-4 flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i>
-                                    <span>+44 078 9504 7944</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div class="text-center mb-12">
+                <img src="v5medlogo.png" alt="V5 Medical LTD Logo" class="h-24 mx-auto mb-6">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
+                <div class="policy-date">
+                    <p class="text-blue-900 font-semibold">Last Updated: January 1, 2024</p>
+                    <p class="text-gray-600 text-sm mt-1">Effective Date: January 1, 2024</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Call to Action -->
-    <section class="py-16 px-4 bg-blue-900 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Have Questions About Our Privacy Practices?</h2>
-            <p class="text-xl text-blue-100 mb-8">We're here to help you understand how we protect your information</p>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a href="https://wa.me/447895047944" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 shadow-lg transition transform hover:scale-105" onclick="trackWhatsAppClick()">
-                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                </a>
-                <a href="index.html#contact" class="bg-white hover:bg-gray-100 text-blue-900 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 shadow-lg transition transform hover:scale-105" onclick="trackNavigationClick('Contact')">
-                    <i class="fas fa-envelope"></i> Send Inquiry
-                </a>
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">1. Introduction</h2>
+                <p class="text-gray-700 mb-4">
+                    V5 Medical LTD ("we", "us", or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you visit our website, use our services, or interact with us.
+                </p>
+                <p class="text-gray-700">
+                    By using our website or providing us with your personal information, you consent to the collection, use, and disclosure of your personal information as described in this Privacy Policy.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">2. Information We Collect</h2>
+                <p class="text-gray-700 mb-4">
+                    We may collect the following types of personal information from you:
+                </p>
+                <h3 class="text-xl privacy-subheading">2.1 Information You Provide to Us</h3>
+                <ul class="privacy-list text-gray-700">
+                    <li>Contact information, such as your name, company name, email address, phone number, and postal address</li>
+                    <li>Business information, such as your job title, company details, and industry</li>
+                    <li>Communication preferences and interests</li>
+                    <li>Information provided through our contact forms, inquiries, or other communications with us</li>
+                </ul>
+
+                <h3 class="text-xl privacy-subheading">2.2 Information Collected Automatically</h3>
+                <ul class="privacy-list text-gray-700">
+                    <li>Website usage information, such as pages visited, time spent on pages, and navigation patterns</li>
+                    <li>Device information, such as IP address, browser type, operating system, and device identifiers</li>
+                    <li>Referral source and search terms used to find our website</li>
+                    <li>Information collected through cookies and similar technologies (see Section 6 for more details)</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">3. How We Use Your Information</h2>
+                <p class="text-gray-700 mb-4">
+                    We use your personal information for the following purposes:
+                </p>
+                <ul class="privacy-list text-gray-700">
+                    <li>To provide and improve our products and services</li>
+                    <li>To respond to your inquiries, requests, and provide customer support</li>
+                    <li>To process orders, quotations, and business transactions</li>
+                    <li>To send you information about our products, services, and promotions (with your consent)</li>
+                    <li>To personalize your experience on our website</li>
+                    <li>To analyze website usage and improve our website design and functionality</li>
+                    <li>To comply with legal obligations and protect our legitimate business interests</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">4. How We Share Your Information</h2>
+                <p class="text-gray-700 mb-4">
+                    We may share your personal information with:
+                </p>
+                <ul class="privacy-list text-gray-700">
+                    <li>Our affiliated companies and business partners who assist us in providing our products and services</li>
+                    <li>Service providers who perform functions on our behalf, such as website hosting, data analysis, and marketing</li>
+                    <li>Third parties with your consent or at your direction</li>
+                    <li>Law enforcement agencies, government authorities, or other third parties if required by law or to protect our rights</li>
+                </ul>
+                <p class="text-gray-700 mt-4">
+                    We do not sell, rent, or trade your personal information to third parties for marketing purposes without your explicit consent.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">5. Data Security</h2>
+                <p class="text-gray-700 mb-4">
+                    We take reasonable technical, administrative, and physical measures to protect your personal information from unauthorized access, use, disclosure, alteration, or destruction. These measures include:
+                </p>
+                <ul class="privacy-list text-gray-700">
+                    <li>Secure server infrastructure and encryption technologies</li>
+                    <li>Access controls and authentication mechanisms</li>
+                    <li>Regular security assessments and updates</li>
+                    <li>Employee training on data protection and privacy practices</li>
+                </ul>
+                <p class="text-gray-700 mt-4">
+                    While we strive to protect your personal information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security of your personal information.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">6. Cookies and Similar Technologies</h2>
+                <p class="text-gray-700 mb-4">
+                    We use cookies and similar tracking technologies to enhance your experience on our website, analyze website traffic, and personalize content. Cookies are small text files that are stored on your device when you visit a website.
+                </p>
+                <h3 class="text-xl privacy-subheading">6.1 Types of Cookies We Use</h3>
+                <ul class="privacy-list text-gray-700">
+                    <li><strong>Essential Cookies:</strong> Necessary for the website to function properly</li>
+                    <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website</li>
+                    <li><strong>Functional Cookies:</strong> Enable enhanced functionality and personalization</li>
+                    <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements</li>
+                </ul>
+                <h3 class="text-xl privacy-subheading">6.2 Managing Cookies</h3>
+                <p class="text-gray-700">
+                    You can control cookies through your browser settings. Most browsers allow you to block or delete cookies. However, disabling cookies may affect the functionality of our website.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">7. Your Rights and Choices</h2>
+                <p class="text-gray-700 mb-4">
+                    Depending on your location, you may have the following rights regarding your personal information:
+                </p>
+                <ul class="privacy-list text-gray-700">
+                    <li>The right to access and receive a copy of your personal information</li>
+                    <li>The right to correct or update inaccurate personal information</li>
+                    <li>The right to request deletion of your personal information</li>
+                    <li>The right to restrict or object to certain processing of your personal information</li>
+                    <li>The right to data portability</li>
+                    <li>The right to withdraw consent where we rely on your consent</li>
+                </ul>
+                <p class="text-gray-700 mt-4">
+                    To exercise these rights, please contact us using the information provided in Section 10. We may require verification of your identity before processing your request.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">8. Third-Party Websites</h2>
+                <p class="text-gray-700">
+                    Our website may contain links to third-party websites. This Privacy Policy does not apply to those third-party websites. We are not responsible for the privacy practices or content of third-party websites. We encourage you to review the privacy policies of any third-party websites you visit.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">9. Children's Privacy</h2>
+                <p class="text-gray-700">
+                    Our website and services are not directed to children under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that we have collected personal information from a child under 16, we will take steps to delete such information.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">10. Changes to This Privacy Policy</h2>
+                <p class="text-gray-700 mb-4">
+                    We may update this Privacy Policy from time to time. When we make changes, we will revise the "Last Updated" date at the top of this policy. We encourage you to review this Privacy Policy periodically.
+                </p>
+                <p class="text-gray-700">
+                    If we make material changes to this Privacy Policy, we will notify you by posting a prominent notice on our website or by other means as required by law.
+                </p>
+            </div>
+
+            <div class="privacy-section">
+                <h2 class="text-2xl privacy-heading">11. Contact Us</h2>
+                <p class="text-gray-700 mb-4">
+                    If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">Email</h3>
+                        <p class="text-gray-700 mb-2">
+                            <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                            <a href="mailto:sales@v5md.com" class="text-blue-600 hover:text-blue-800">sales@v5md.com</a>
+                        </p>
+                        <p class="text-gray-700">
+                            <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                            <a href="mailto:info@v5md.com" class="text-blue-600 hover:text-blue-800">info@v5md.com</a>
+                        </p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">WhatsApp</h3>
+                        <p class="text-gray-700 mb-2">
+                            <i class="fab fa-whatsapp text-green-600 mr-2"></i>
+                            <a href="https://wa.me/447895047944" target="_blank" class="text-blue-600 hover:text-blue-800" onclick="trackWhatsAppClick()">+44 078 9504 7944</a>
+                        </p>
+                        <p class="text-gray-700">
+                            <i class="fab fa-whatsapp text-green-600 mr-2"></i>
+                            <a href="https://wa.me/8618012669897" target="_blank" class="text-blue-600 hover:text-blue-800" onclick="trackWhatsAppClick()">+86 180 1266 9897</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-lg mt-6">
+                    <h3 class="text-lg font-semibold text-blue-900 mb-3">Postal Address</h3>
+                    <p class="text-gray-700">
+                        <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>
+                        SUZHOU V5 MEDICAL TECHNOLOGY CO., LTD.<br>
+                        No. 168, Luying Road, Kunshan Development Zone<br>
+                        Jiangsu, China 215300
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600">
+                    Thank you for trusting V5 Medical LTD with your personal information. We are committed to protecting your privacy and providing you with the highest level of service.
+                </p>
+                <div class="mt-6">
+                    <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition" onclick="trackNavigationClick('Home')">
+                        <i class="fas fa-home mr-2"></i> Return to Home
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -643,7 +575,7 @@
                 <div class="ml-6 md:ml-8">
                     <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
                     <div class="space-y-2">
-                        <a href="index.html#home" class="block text-gray-400 hover:text-white transition text-sm" onclick="trackNavigationClick('Home')">Home</a>
+                        <a href="index.html" class="block text-gray-400 hover:text-white transition text-sm" onclick="trackNavigationClick('Home')">Home</a>
                         <a href="index.html#about" class="block text-gray-400 hover:text-white transition text-sm" onclick="trackNavigationClick('About Us')">About Us</a>
                         <a href="index.html#products" class="block text-gray-400 hover:text-white transition text-sm" onclick="trackNavigationClick('Products')">Products</a>
                         <a href="index.html#contact" class="block text-gray-400 hover:text-white transition text-sm" onclick="trackNavigationClick('Contact')">Contact</a>
@@ -664,16 +596,20 @@
                             <span>+86 180 1266 9897 (backup)</span>
                         </p>
                         <p class="flex items-center gap-2">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope text-blue-400"></i>
                             <span>sales@v5md.com</span>
                         </p>
                         <p class="flex items-center gap-2">
-                            <i class="fas fa-envelope"></i>
-                            <span>privacy@v5md.com</span>
+                            <i class="fab fa-google text-red-400"></i>
+                            <span>v5md.com@gmail.com</span>
                         </p>
                         <p class="flex items-center gap-2">
                             <i class="fas fa-phone"></i>
                             <span>+86-512 8781 1988</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <span>No. 168, Luying Road, Kunshan Development Zone, Jiangsu, China</span>
                         </p>
                     </div>
                 </div>
@@ -697,17 +633,23 @@
                     
                     <h4 class="font-semibold mb-4 text-lg">Follow Us</h4>
                     <div class="flex gap-4">
-                        <a href="https://wa.me/447895047944" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center transition" onclick="trackWhatsAppClick()">
-                            <i class="fab fa-whatsapp text-xl"></i>
+                        <a href="https://www.facebook.com/v5med" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition transform hover:scale-110"
+                           onclick="trackWhatsAppClick()">
+                            <i class="fab fa-facebook-f text-xl text-white"></i>
                         </a>
-                        <a href="mailto:sales@v5md.com" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition">
-                            <i class="fas fa-envelope text-xl"></i>
+                        <a href="https://www.instagram.com/v5med" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 rounded-full flex items-center justify-center transition transform hover:scale-110"
+                           onclick="trackWhatsAppClick()">
+                            <i class="fab fa-instagram text-xl text-white"></i>
                         </a>
-                        <a href="https://linkedin.com/company/v5med" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-blue-500 rounded-full flex items-center justify-center transition">
-                            <i class="fab fa-linkedin text-xl"></i>
+                        <a href="https://linkedin.com/company/v5med" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition transform hover:scale-110">
+                            <i class="fab fa-linkedin-in text-xl text-white"></i>
                         </a>
-                        <a href="https://x.com/v5med" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-blue-400 rounded-full flex items-center justify-center transition">
-                            <i class="fab fa-twitter text-xl"></i>
+                        <a href="https://x.com/v5med" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center transition transform hover:scale-110">
+                            <i class="fab fa-twitter text-xl text-white"></i>
                         </a>
                     </div>
                 </div>
@@ -733,10 +675,26 @@
         <i class="fab fa-whatsapp text-2xl"></i>
         <span>Chat with us</span>
     </a>
+    
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up text-xl"></i>
     </button>
+
+    <div id="google_translate_element" class="fixed top-4 right-4 z-50 bg-blue-900 text-white px-3 py-1 rounded-full shadow-lg flex items-center gap-2">
+        🌍 Translate
+    </div>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,zh-CN,ar,es,fr,ru,nl,de,it,pt,ja,ko',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+      }
+    </script>
 
     <!-- JavaScript -->
     <script>
@@ -812,6 +770,14 @@
                     link.classList.add('text-gray-600', 'hover:text-blue-600');
                 });
             }
+        });
+
+        // Loading Animation
+        const loader = document.querySelector('.page-loader');
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 500);
         });
 
         // Back to Top

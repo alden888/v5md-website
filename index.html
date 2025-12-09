@@ -752,49 +752,71 @@
                 </div>
             </div>
 
-            <!-- Inquiry Form -->
+                    <!-- Inquiry Form - 升级版 Formspree -->
             <div class="bg-white p-8 rounded-2xl shadow-xl">
-                <h3 class="text-3xl font-bold mb-8">Online Inquiry Form</h3>
-                <form id="inquiry-form" class="space-y-6">
+                <h3 class="text-3xl font-bold mb-8 text-center">Online Inquiry Form</h3>
+                <form action="https://formspree.io/f/xdkqlygg" method="POST" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold mb-2">Company Name *</label>
-                            <input type="text" id="company" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="text" name="company" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold mb-2">Contact Person *</label>
-                            <input type="text" id="person" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold mb-2">Email Address *</label>
-                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="email" name="_replyto" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold mb-2">Phone / WhatsApp</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold mb-2">Country *</label>
-                            <input type="text" id="country" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <input type="text" name="country" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
                             <label class="block text-sm font-semibold mb-2">Product Interest</label>
-                            <select id="product" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <select name="product" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                                 <option value="">Select Product Category</option>
-                                <option value="sutures">Surgical Sutures</option>
-                                <option value="packs">Surgical Packs</option>
-                                <option value="injection">Injection & Infusion</option>
-                                <option value="dental">Dental Consumables</option>
-                                <option value="other">Other</option>
+                                <option value="Surgical Sutures">Surgical Sutures</option>
+                                <option value="Surgical Packs">Surgical Packs</option>
+                                <option value="Injection & Infusion">Injection & Infusion</option>
+                                <option value="Gauze & Dressing">Gauze & Dressing</option>
+                                <option value="Dental Consumables">Dental Consumables</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                     </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Message / Requirements *</label>
+                        <textarea name="message" required rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                    </div>
+
+                    <!-- 隐藏字段防 spam -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg text-lg font-semibold transition flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i> Send Inquiry
+                    </button>
+                </form>
+
+                <!-- 提交成功提示 -->
+                <div id="form-success" class="hidden mt-6 p-6 bg-green-50 border border-green-200 text-green-800 rounded-lg text-center">
+                    <i class="fas fa-check-circle text-3xl mb-3"></i>
+                    <p class="font-semibold">Thank you! Your message has been sent successfully.</p>
+                    <p class="text-sm mt-2">We will reply to you within 24 hours.</p>
+                </div>
+            </div>
 
                     <div>
                         <label class="block text-sm font-semibold mb-2">Message / Requirements *</label>
@@ -1051,4 +1073,5 @@
 </body>
 
 </html>
+
 

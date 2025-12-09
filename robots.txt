@@ -1,0 +1,11 @@
+# robots.txt for V5 Medical LTD
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://v5md.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

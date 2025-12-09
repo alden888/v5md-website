@@ -334,6 +334,29 @@
                 'event_label': 'Page Load Time'
             });
         });
+
+        // 表单提交跟踪 - 优化版：监听form submit事件
+        document.addEventListener('DOMContentLoaded', function() {
+            const inquiryForm = document.getElementById('inquiry-form');
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', function(e) {
+                    // 跟踪表单提交事件
+                    trackFormSubmission('Contact Form');
+                    
+                    // 记录表单提交的详细信息
+                    const formData = new FormData(this);
+                    const company = formData.get('company') || 'Not provided';
+                    const productInterest = formData.get('product') || 'Not specified';
+                    
+                    gtag('event', 'form_submission_details', {
+                        'event_category': 'Forms',
+                        'event_label': 'Contact Form Submission',
+                        'company': company,
+                        'product_interest': productInterest
+                    });
+                });
+            }
+        });
     </script>
 </head>
 <body class="smooth-scroll font-sans">
@@ -916,7 +939,7 @@
                     <!-- 隐藏字段防 spam -->
                     <input type="text" name="_gotcha" style="display:none">
 
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg text-lg font-semibold transition flex items-center justify-center gap-2" onclick="trackFormSubmission('Contact Form')">
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg text-lg font-semibold transition flex items-center justify-center gap-2">
                         <i class="fas fa-paper-plane"></i> Send Inquiry
                     </button>
                 </form>

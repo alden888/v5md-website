@@ -1076,9 +1076,24 @@
             }
         });
     </script>
+    // Loading Animation
+const loader = document.querySelector('.page-loader');
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 500); // 0.5秒淡出
+});
+
+// Back to Top
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('show', window.scrollY > 300);
+});
+backToTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 </body>
 
 </html>
+
 
 
 

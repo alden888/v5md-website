@@ -171,7 +171,67 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-JE15YSMC2W');
+
+        gtag('config', 'G-JE15YSMC2W', {
+            'page_title': document.title,
+            'page_path': window.location.pathname,
+            'anonymize_ip': true,
+            'cookie_expires': 2592000
+        });
+
+        // Google Analytics 事件跟踪函数
+        function trackProductView(productId, productName, productCategory, price) {
+            gtag('event', 'view_item', {
+                'item_id': productId,
+                'item_name': productName,
+                'item_category': productCategory,
+                'price': price,
+                'currency': 'USD',
+                'event_category': 'Products',
+                'event_label': productName
+            });
+        }
+
+        function trackFormSubmission(formName) {
+            gtag('event', 'submit_form', {
+                'form_name': formName,
+                'event_category': 'Forms',
+                'event_label': formName + ' Submission'
+            });
+        }
+
+        function trackPDFDownload(pdfName) {
+            gtag('event', 'download', {
+                'file_name': pdfName,
+                'file_type': 'pdf',
+                'event_category': 'Downloads',
+                'event_label': pdfName
+            });
+        }
+
+        function trackWhatsAppClick() {
+            gtag('event', 'whatsapp_click', {
+                'event_category': 'Contact',
+                'event_label': 'WhatsApp Contact'
+            });
+        }
+
+        function trackNavigationClick(sectionName) {
+            gtag('event', 'navigation_click', {
+                'section': sectionName,
+                'event_category': 'Navigation',
+                'event_label': 'Navigate to ' + sectionName
+            });
+        }
+
+        function trackBlogView(postId, postTitle) {
+            gtag('event', 'view_blog_post', {
+                'post_id': postId,
+                'post_title': postTitle,
+                'event_category': 'Blog',
+                'event_label': postTitle
+            });
+        }
     </script>
 </head>
 <body class="font-sans bg-gray-50">
@@ -623,17 +683,30 @@
                 <div>
                     <h4 class="font-semibold mb-4 text-lg">Follow Us</h4>
                     <div class="flex gap-4 mb-6">
-                        <a href="#" class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition">
-                            <i class="fab fa-facebook-f text-white"></i>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/v5med" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition transform hover:scale-110"
+                           onclick="trackWhatsAppClick()">
+                            <i class="fab fa-facebook-f text-xl text-white"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-blue-400 hover:bg-blue-500 rounded-full flex items-center justify-center transition">
-                            <i class="fab fa-twitter text-white"></i>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/v5med" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 rounded-full flex items-center justify-center transition transform hover:scale-110"
+                           onclick="trackWhatsAppClick()">
+                            <i class="fab fa-instagram text-xl text-white"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-900 rounded-full flex items-center justify-center transition">
-                            <i class="fab fa-linkedin-in text-white"></i>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/company/v5med" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition transform hover:scale-110">
+                            <i class="fab fa-linkedin-in text-xl text-white"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center transition">
-                            <i class="fab fa-instagram text-white"></i>
+
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com/v5med" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center transition transform hover:scale-110">
+                            <i class="fab fa-twitter text-xl text-white"></i>
                         </a>
                     </div>
                     <h4 class="font-semibold mb-4 text-lg">Newsletter</h4>
@@ -660,6 +733,21 @@
             </div>
         </div>
     </footer>
+
+    <div id="google_translate_element" class="fixed top-4 right-4 z-50 bg-blue-900 text-white px-3 py-1 rounded-full shadow-lg flex items-center gap-2">
+    🌍 Translate
+</div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,ar,es,fr,ru,nl,de,it,pt,ja,ko,tr,pl,vi,hi,id,th,sv,zh-CN,zh-TW',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/447895047944" target="_blank" class="whatsapp-float" style="position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; padding: 15px 20px; border-radius: 50px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); z-index: 1000; transition: all 0.3s ease; text-decoration: none; display: flex; align-items: center; gap: 10px;">
@@ -805,12 +893,16 @@
             const modalTitle = document.getElementById('modal-title');
             const modalContent = document.getElementById('modal-content');
             
+            // Track blog post view
+            let postTitle = '';
+            
             // Sample content for different posts
             let content = '';
             
             switch(postId) {
                 case 'london-hospital-shipment':
-                    modalTitle.textContent = 'Successful Delivery to London Hospital';
+                    postTitle = 'Successful Delivery to London Hospital';
+                    modalTitle.textContent = postTitle;
                     content = `
                         <div class="space-y-6">
                             <div class="flex items-center gap-3 text-gray-500 text-sm">
@@ -861,7 +953,7 @@
                             </div>
                             
                             <div class="text-center mt-8">
-                                <a href="https://wa.me/447895047944" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition">
+                                <a href="https://wa.me/447895047944" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition" onclick="trackWhatsAppClick()">
                                     <i class="fab fa-whatsapp mr-2"></i> Inquire About Similar Products
                                 </a>
                             </div>
@@ -870,7 +962,8 @@
                     break;
                     
                 case 'dubai-customer-testimonial':
-                    modalTitle.textContent = '5-Star Feedback from Dubai Clinic';
+                    postTitle = '5-Star Feedback from Dubai Clinic';
+                    modalTitle.textContent = postTitle;
                     content = `
                         <div class="space-y-6">
                             <div class="flex items-center gap-3 text-gray-500 text-sm">
@@ -924,8 +1017,65 @@
                             </div>
                             
                             <div class="text-center mt-8">
-                                <a href="index.html#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                                <a href="index.html#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition" onclick="trackNavigationClick('Contact')">
                                     <i class="fas fa-comment mr-2"></i> Share Your Story
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                    
+                case 'nigeria-humanitarian-aid':
+                    postTitle = 'Humanitarian Aid Shipment to Nigeria';
+                    modalTitle.textContent = postTitle;
+                    content = `
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3 text-gray-500 text-sm">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>October 5, 2024</span>
+                                <i class="fas fa-map-marker-alt ml-2"></i>
+                                <span>Lagos, Nigeria</span>
+                                <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs ml-2">Shipment</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Humanitarian aid shipment" class="w-full rounded-lg shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1581579438333-24c46039a08d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medical supplies distribution" class="w-full rounded-lg shadow-lg">
+                            </div>
+                            
+                            <p class="text-gray-700 leading-relaxed">
+                                As part of our commitment to global healthcare, V5 Medical successfully delivered essential medical supplies to hospitals in Lagos, Nigeria. This humanitarian aid shipment included life-saving medical consumables to support local healthcare facilities.
+                            </p>
+                            
+                            <h4 class="text-xl font-semibold text-gray-900">Aid Shipment Contents:</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h5 class="font-semibold text-green-900 mb-2">Emergency Supplies:</h5>
+                                    <ul class="space-y-1 text-sm text-gray-700">
+                                        <li>• Surgical Sutures: 10,000 units</li>
+                                        <li>• Gauze and Dressing: 50,000 units</li>
+                                        <li>• Surgical Gloves: 20,000 pairs</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <h5 class="font-semibold text-blue-900 mb-2">Medical Equipment:</h5>
+                                    <ul class="space-y-1 text-sm text-gray-700">
+                                        <li>• Syringes and Needles: 50,000 units</li>
+                                        <li>• IV Sets: 10,000 units</li>
+                                        <li>• Surgical Masks: 100,000 units</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 mb-3">Impact:</h4>
+                                <p class="text-gray-700 mb-3">This shipment is expected to benefit over 50,000 patients in 15 hospitals across Lagos. Our team worked closely with local health authorities to ensure the supplies reach those who need them most.</p>
+                                <p class="text-gray-700 italic">V5 Medical is committed to supporting global healthcare initiatives and will continue to provide essential medical supplies to regions in need.</p>
+                            </div>
+                            
+                            <div class="text-center mt-8">
+                                <a href="https://wa.me/447895047944" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition" onclick="trackWhatsAppClick()">
+                                    <i class="fab fa-whatsapp mr-2"></i> Discuss Partnership Opportunities
                                 </a>
                             </div>
                         </div>
@@ -934,8 +1084,14 @@
                     
                 // Add more cases for other blog posts
                 default:
-                    modalTitle.textContent = 'Blog Post Details';
+                    postTitle = 'Blog Post Details';
+                    modalTitle.textContent = postTitle;
                     content = '<p class="text-gray-700">Content coming soon...</p>';
+            }
+            
+            // Track blog post view
+            if (typeof trackBlogView === 'function') {
+                trackBlogView(postId, postTitle);
             }
             
             modalContent.innerHTML = content;

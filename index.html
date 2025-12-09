@@ -1024,23 +1024,6 @@
             }
         });
 
-        // Form submission
-        document.getElementById('inquiry-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const company = document.getElementById('company').value;
-            const person = document.getElementById('person').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const country = document.getElementById('country').value;
-            const product = document.getElementById('product').value;
-            const message = document.getElementById('message').value;
-            
-            const mailtoLink = `mailto:sales@v5md.com,order@v5md.com?subject=Inquiry from ${encodeURIComponent(company)}&body=Company: ${encodeURIComponent(company)}%0D%0AContact: ${encodeURIComponent(person)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0ACountry: ${encodeURIComponent(country)}%0D%0AProduct Interest: ${encodeURIComponent(product)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
-            
-            window.location.href = mailtoLink;
-        });
-
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1073,5 +1056,6 @@
 </body>
 
 </html>
+
 
 

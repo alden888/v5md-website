@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact V5 Medical LTD for inquiries about surgical sutures and medical devices.">
+    <title>Contact Us | V5 Medical LTD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans bg-gray-50">
+
+    <div class="page-loader"><div class="loader-spinner"></div></div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-blue-900/90">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="v5logo.png" alt="V5 Logo" class="h-12">
+                    <div class="font-bold text-xl text-white">V5 Medical</div>
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-blue-100 hover:text-white">Home</a>
+                    <a href="about.html" class="nav-link text-blue-100 hover:text-white">About Us</a>
+                    <a href="catalog.html" class="nav-link text-blue-100 hover:text-white">Products</a>
+                    <a href="blog.html" class="nav-link text-blue-100 hover:text-white">Blog</a>
+                    <a href="contact.html" class="nav-link text-white font-bold">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-gray-100 pt-32 pb-16 text-center">
+        <h1 class="text-4xl font-bold text-blue-900 mb-4">Get in Touch</h1>
+        <p class="text-xl text-gray-600">We respond to all inquiries within 24 hours</p>
+    </div>
+
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+            
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-start gap-4">
+                    <div class="bg-green-100 p-4 rounded-full text-green-600"><i class="fab fa-whatsapp text-2xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg">WhatsApp</h3>
+                        <p class="text-gray-600">+44 078 9504 7944 (Global)</p>
+                        <p class="text-gray-600">+86 180 1266 9897 (China)</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-start gap-4">
+                    <div class="bg-blue-100 p-4 rounded-full text-blue-600"><i class="fas fa-envelope text-2xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg">Email</h3>
+                        <p class="text-gray-600">Sales: sales@v5md.com</p>
+                        <p class="text-gray-600">Orders: order@v5md.com</p>
+                        <p class="text-gray-600">Info: info@v5md.com</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md flex items-start gap-4">
+                    <div class="bg-red-100 p-4 rounded-full text-red-600"><i class="fas fa-map-marker-alt text-2xl"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg">Address</h3>
+                        <p class="text-gray-600">No. 168, Luying Road, Kunshan Development Zone, Jiangsu, China</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-xl">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">Send an Inquiry</h2>
+                <form action="https://formspree.io/f/xdkqlygg" method="POST" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Company Name *</label>
+                            <input type="text" name="company" required class="w-full p-3 border rounded-lg bg-gray-50">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Contact Person *</label>
+                            <input type="text" name="person" required class="w-full p-3 border rounded-lg bg-gray-50">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Email *</label>
+                            <input type="email" name="email" required class="w-full p-3 border rounded-lg bg-gray-50">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-1">Phone/WhatsApp</label>
+                            <input type="text" name="phone" class="w-full p-3 border rounded-lg bg-gray-50">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold mb-1">Country *</label>
+                        <input type="text" name="country" required class="w-full p-3 border rounded-lg bg-gray-50">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold mb-1">Product Interest</label>
+                        <select name="product" class="w-full p-3 border rounded-lg bg-gray-50">
+                            <option value="">Select Category...</option>
+                            <option value="Sutures">Surgical Sutures</option>
+                            <option value="Packs">Surgical Packs</option>
+                            <option value="Injection">Injection & Infusion</option>
+                            <option value="Dental">Dental Consumables</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold mb-1">Message *</label>
+                        <textarea name="message" rows="4" required class="w-full p-3 border rounded-lg bg-gray-50"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-4 text-center">
+        <p>&copy; 2024 V5 Medical LTD. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="google_translate_element" class="fixed top-4 right-4 z-50"></div>
+</body>
+</html>

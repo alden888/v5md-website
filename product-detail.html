@@ -3,174 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Medical Grade PGA Absorbable Sutures - High tensile strength, predictable absorption. ISO 13485 certified manufacturer.">
-    <title>Absorbable Surgical Sutures (PGA) | V5 Medical</title>
+    
+    <meta name="description" content="Absorbable Surgical Sutures (PGA) - High tensile strength, predictable absorption. ISO 13485/CE/FDA certified manufacturer.">
+    <meta name="keywords" content="PGA sutures, polyglycolic acid suture, absorbable sutures, surgical supplies china">
+    <meta name="author" content="V5 Medical LTD">
+    <meta name="robots" content="index, follow">
+
+    <title>Absorbable Surgical Sutures (PGA) | V5 Medical Product Details</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#1e40af', secondary: '#3b82f6', accent: '#2563eb' },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
     <style>
-        .spec-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        .spec-table th, .spec-table td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; }
-        .spec-table th { background-color: #f8fafc; font-weight: 600; color: #1e40af; }
-        .spec-table tr:nth-child(even) { background-color: #f9fafb; }
+        /* Tab Styling */
+        .tab-btn.active { border-bottom: 3px solid #1e40af; color: #1e40af; font-weight: 700; }
+        /* Table Styling */
+        .spec-table th { background-color: #f8fafc; color: #334155; font-weight: 600; text-align: left; }
+        .spec-table td, .spec-table th { border-bottom: 1px solid #e2e8f0; padding: 12px 16px; }
+        .spec-table tr:last-child td { border-bottom: none; }
+        /* Loader Fallback */
+        .page-loader { position: fixed; inset: 0; background: #1e40af; z-index: 9999; display: flex; justify-content: center; align-items: center; transition: opacity 0.5s; }
     </style>
 </head>
-<body class="font-sans bg-gray-50">
 
-    <nav class="bg-blue-900 text-white p-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">V5 Medical</a>
-            <div class="hidden md:flex gap-6">
-                <a href="index.html" class="hover:text-blue-200">Home</a>
-                <a href="about.html" class="hover:text-blue-200">About Us</a>
-                <a href="catalog.html" class="hover:text-blue-200 font-bold">Products</a>
-                <a href="contact.html" class="hover:text-blue-200">Contact</a>
+<body class="smooth-scroll font-sans text-gray-800 bg-gray-50">
+  
+    <div id="loader" class="page-loader"><div class="loader-spinner"></div></div>
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-blue-900/90 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="images/v5logo.png" onerror="this.src='v5logo.png'" class="h-10 w-auto" alt="Logo">
+                    <div>
+                        <div class="font-bold text-xl leading-none">V5 Medical</div>
+                        <div class="text-xs text-blue-200">Global Supplier</div>
+                    </div>
+                </a>
+                <div class="hidden md:flex gap-8">
+                    <a href="index.html" class="nav-link text-blue-100 hover:text-white">Home</a>
+                    <a href="about.html" class="nav-link text-blue-100 hover:text-white">About Us</a>
+                    <a href="catalog.html" class="nav-link text-white font-bold">Products</a>
+                    <a href="blog.html" class="nav-link text-blue-100 hover:text-white">Blog</a>
+                    <a href="contact.html" class="nav-link text-blue-100 hover:text-white">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-gray-800 border-t absolute w-full shadow-xl">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-blue-50">Home</a>
+                <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-blue-50">About Us</a>
+                <a href="catalog.html" class="block px-4 py-2 rounded-lg bg-blue-50 text-blue-600 font-bold">Products</a>
+                <a href="blog.html" class="block px-4 py-2 rounded-lg hover:bg-blue-50">Blog</a>
+                <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-blue-50">Contact</a>
             </div>
         </div>
     </nav>
 
-    <div class="bg-gray-100 py-3 px-4 border-b">
-        <div class="max-w-7xl mx-auto text-sm text-gray-500">
-            <a href="index.html">Home</a> > <a href="catalog.html">Products</a> > <span class="text-blue-900 font-semibold">Absorbable Sutures</span>
+    <div class="bg-gray-100 pt-28 pb-6 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 text-sm text-gray-500">
+            <a href="index.html" class="hover:text-blue-600">Home</a>
+            <span class="mx-2">/</span>
+            <a href="catalog.html" class="hover:text-blue-600">Products</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-900 font-semibold">Absorbable Surgical Sutures</span>
         </div>
     </div>
 
-    <main class="max-w-7xl mx-auto px-4 py-12">
-        <div class="grid md:grid-cols-2 gap-12">
-            <div>
-                <div class="bg-white p-2 rounded-xl shadow-lg border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=800" alt="PGA Sutures" class="w-full rounded-lg">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid lg:grid-cols-3 gap-12">
+            
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-2 mb-8">
+                    <img src="images/products/sutures_securos_picture06.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=800'" 
+                         alt="PGA Sutures Detail" 
+                         class="w-full h-auto rounded-xl object-cover">
                 </div>
-                <div class="grid grid-cols-3 gap-4 mt-4">
-                    <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=200" class="rounded-lg cursor-pointer hover:opacity-80 border">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=200" class="rounded-lg cursor-pointer hover:opacity-80 border">
+
+                <div class="border-b border-gray-200 mb-8">
+                    <nav class="flex gap-8">
+                        <button onclick="switchTab('desc')" class="tab-btn active py-4 text-sm font-medium text-gray-500 hover:text-blue-600 transition">Description</button>
+                        <button onclick="switchTab('specs')" class="tab-btn py-4 text-sm font-medium text-gray-500 hover:text-blue-600 transition">Technical Specs</button>
+                        <button onclick="switchTab('packaging')" class="tab-btn py-4 text-sm font-medium text-gray-500 hover:text-blue-600 transition">Packaging</button>
+                    </nav>
                 </div>
+
+                <div id="desc" class="tab-content block space-y-6 text-gray-700 leading-relaxed">
+                    <h2 class="text-2xl font-bold text-gray-900">PGA Absorbable Surgical Suture</h2>
+                    <p class="text-lg text-gray-500 font-medium">聚乙醇酸可吸收缝合线</p>
+                    <p>
+                        Our Polyglycolic Acid (PGA) sutures are synthetic, absorbable, sterile surgical sutures composed of Homopolymer of Glycolide (100%). The sutures are coated with polycaprolactone and calcium stearate to ensure smooth tissue passage and easy knot tying.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 mt-6">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">High Tensile Strength</h4>
+                                <p class="text-sm">Provides wound support during critical healing period (up to 30 days).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Predictable Absorption</h4>
+                                <p class="text-sm">Absorption by hydrolysis complete between 60-90 days.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Smooth Passage</h4>
+                                <p class="text-sm">Coated surface minimizes tissue trauma.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Secure Knotting</h4>
+                                <p class="text-sm">Excellent handling properties and knot security.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="specs" class="tab-content hidden">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Technical Data Sheet</h3>
+                    <div class="overflow-x-auto border border-gray-200 rounded-lg">
+                        <table class="w-full spec-table">
+                            <tbody>
+                                <tr>
+                                    <th class="w-1/3">Composition</th>
+                                    <td>Polyglycolic Acid (PGA)</td>
+                                </tr>
+                                <tr>
+                                    <th>Structure</th>
+                                    <td>Braided (Multifilament)</td>
+                                </tr>
+                                <tr>
+                                    <th>Coating</th>
+                                    <td>Polycaprolactone and Calcium Stearate</td>
+                                </tr>
+                                <tr>
+                                    <th>Color</th>
+                                    <td>Violet or Undyed</td>
+                                </tr>
+                                <tr>
+                                    <th>Size Range (USP)</th>
+                                    <td>6/0 - 2 (Metric 0.7 - 5)</td>
+                                </tr>
+                                <tr>
+                                    <th>Tensile Strength Retention</th>
+                                    <td>
+                                        75% at 2 weeks<br>
+                                        50% at 3 weeks
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Mass Absorption</th>
+                                    <td>Complete within 60-90 days</td>
+                                </tr>
+                                <tr>
+                                    <th>Needle Types</th>
+                                    <td>Taper Point, Cutting, Reverse Cutting, Round Body</td>
+                                </tr>
+                                <tr>
+                                    <th>Needle Curvature</th>
+                                    <td>1/2 Circle, 3/8 Circle, Straight</td>
+                                </tr>
+                                <tr>
+                                    <th>Sterilization</th>
+                                    <td>Ethylene Oxide (EO Gas)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="packaging" class="tab-content hidden space-y-4">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Packaging Information</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Inner Pack:</strong> Aluminum Foil Bag (Moisture proof)</li>
+                        <li><strong>Box Pack:</strong> 12 pcs / box (Standard)</li>
+                        <li><strong>Carton Pack:</strong> 50 boxes / carton (600 pcs)</li>
+                        <li><strong>Carton Size:</strong> 32 x 30 x 28 cm (Approx)</li>
+                        <li><strong>Labeling:</strong> OEM available, includes Lot No., Mfg Date, Exp Date.</li>
+                    </ul>
+                </div>
+
             </div>
 
-            <div>
-                <h1 class="text-3xl font-bold text-gray-900 mb-2">Absorbable Surgical Sutures (PGA)</h1>
-                <p class="text-lg text-gray-500 mb-6">可吸收医用缝合线 (聚乙醇酸)</p>
-                
-                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-8">
-                    <div class="flex items-center gap-2 mb-2">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="font-semibold text-blue-900">Material:</span> Polyglycolic Acid (PGA)
+            <aside class="lg:col-span-1">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 sticky top-24">
+                    <div class="mb-6 pb-6 border-b border-gray-100">
+                        <span class="text-blue-600 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full">In Stock</span>
+                        <h1 class="text-2xl font-bold text-gray-900 mt-3 mb-1">PGA Surgical Sutures</h1>
+                        <p class="text-gray-500 text-sm mb-4">Cat.# NQ-PGA Series</p>
+                        
+                        <div class="flex gap-2">
+                            <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded border">ISO 13485</span>
+                            <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded border">CE Mark</span>
+                            <span class="bg-gray-100 text-gray-600 text-xs font-bold px-2 py-1 rounded border">FDA</span>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2 mb-2">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="font-semibold text-blue-900">Structure:</span> Braided
+
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">MOQ:</span>
+                            <span class="font-semibold">500 Boxes</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">Lead Time:</span>
+                            <span class="font-semibold">7-15 Days</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">Sample:</span>
+                            <span class="font-semibold text-green-600">Available Free</span>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2 mb-2">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="font-semibold text-blue-900">Certifications:</span> ISO 13485, CE, FDA
+
+                    <div class="space-y-3">
+                        <a href="contact.html?product=PGA%20Sutures" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-bold py-3 rounded-xl transition shadow-md">
+                            <i class="fas fa-envelope mr-2"></i> Send Inquiry
+                        </a>
+                        <a href="https://wa.me/447895047944" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center font-bold py-3 rounded-xl transition shadow-md">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp Quote
+                        </a>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="font-semibold text-blue-900">Sterilization:</span> EO Gas
+
+                    <div class="mt-6 pt-6 border-t border-gray-100 text-center">
+                        <a href="https://pub-224e4e74685e409e833e89d4ab5143fb.r2.dev/Catalog.pdf" target="_blank" class="text-blue-600 text-sm font-semibold hover:underline">
+                            <i class="fas fa-file-pdf mr-1"></i> Download Datasheet
+                        </a>
                     </div>
                 </div>
+            </aside>
 
-                <div class="flex gap-4">
-                    <a href="https://wa.me/447895047944" target="_blank" class="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-4 rounded-lg font-bold text-lg transition shadow-lg">
-                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Quote
-                    </a>
-                    <a href="mailto:sales@v5md.com" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-4 rounded-lg font-bold text-lg transition shadow-lg">
-                        <i class="fas fa-envelope mr-2"></i> Email Inquiry
-                    </a>
+        </div>
+    </div>
+
+    <section class="py-12 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8">Related Products</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <a href="#" class="group block">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden h-40 mb-3">
+                        <img src="images/products/catgut.jpg" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Catgut">
+                    </div>
+                    <h3 class="font-bold text-gray-900 group-hover:text-blue-600">Chromic Catgut</h3>
+                </a>
+                <a href="#" class="group block">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden h-40 mb-3">
+                        <img src="images/products/silk.jpg" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Silk">
+                    </div>
+                    <h3 class="font-bold text-gray-900 group-hover:text-blue-600">Silk Braided</h3>
+                </a>
+                <a href="#" class="group block">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden h-40 mb-3">
+                        <img src="images/products/needle.jpg" onerror="this.src='https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=200'" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Needle">
+                    </div>
+                    <h3 class="font-bold text-gray-900 group-hover:text-blue-600">Surgical Needles</h3>
+                </a>
+                <a href="#" class="group block">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden h-40 mb-3">
+                        <img src="images/products/SURGICAL SUTURE KIT.jpg" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Pack">
+                    </div>
+                    <h3 class="font-bold text-gray-900 group-hover:text-blue-600">Suture Kit</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-8 mb-12">
+                <div class="md:col-span-3">
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="images/v5logo.png" onerror="this.src='v5logo.png'" class="h-10 w-auto" alt="Logo">
+                        <span class="text-xl font-bold">V5 Medical LTD</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Professional Global Medical Consumables Supplier</p>
                 </div>
-                
-                <p class="text-sm text-gray-500 mt-4 text-center">
-                    <i class="fas fa-clock mr-1"></i> Response time: within 24 hours
-                </p>
+                <div class="hidden md:block md:col-span-1"></div>
+                <div class="md:col-span-2">
+                    <h4 class="font-bold mb-4 text-lg">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="catalog.html" class="hover:text-white transition">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-3 pl-0 md:pl-4">
+                    <h4 class="font-bold mb-4 text-lg">Contact Info</h4>
+                    <div class="space-y-3 text-sm text-gray-400">
+                        <p><i class="fab fa-whatsapp text-green-500 w-5"></i> +44 078 9504 7944</p>
+                        <p><i class="fas fa-envelope text-blue-400 w-5"></i> sales@v5md.com</p>
+                    </div>
+                </div>
+                <div class="md:col-span-3 pl-0 md:pl-4">
+                    <h4 class="font-bold mb-4 text-lg">Follow Us</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-white hover:text-blue-600"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="text-white hover:text-blue-500"><i class="fab fa-linkedin text-2xl"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="mt-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-blue-600 pl-4">Technical Specifications</h2>
-            <div class="overflow-x-auto">
-                <table class="spec-table">
-                    <thead>
-                        <tr>
-                            <th>USP Size</th>
-                            <th>Metric Size</th>
-                            <th>Needle Length (mm)</th>
-                            <th>Needle Shape</th>
-                            <th>Thread Length (cm)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2</td>
-                            <td>5</td>
-                            <td>40mm, 45mm, 50mm</td>
-                            <td>1/2 Circle, 3/8 Circle</td>
-                            <td>75cm, 90cm</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>4</td>
-                            <td>30mm, 35mm, 40mm</td>
-                            <td>Round Body / Cutting</td>
-                            <td>75cm, 90cm</td>
-                        </tr>
-                        <tr>
-                            <td>0</td>
-                            <td>3.5</td>
-                            <td>26mm, 30mm, 35mm</td>
-                            <td>Taper Point</td>
-                            <td>75cm</td>
-                        </tr>
-                        <tr>
-                            <td>2-0</td>
-                            <td>3</td>
-                            <td>22mm, 26mm</td>
-                            <td>Reverse Cutting</td>
-                            <td>45cm, 75cm</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2024 V5 Medical LTD. All rights reserved.</p>
             </div>
-        </div>
-
-        <div class="mt-12 bg-gray-50 p-8 rounded-xl">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Features & Advantages</h2>
-            <ul class="grid md:grid-cols-2 gap-4">
-                <li class="flex items-start gap-3">
-                    <i class="fas fa-star text-yellow-500 mt-1"></i>
-                    <div>
-                        <strong class="block text-gray-900">High Tensile Strength</strong>
-                        <span class="text-gray-600">Supports the wound during the critical healing period.</span>
-                    </div>
-                </li>
-                <li class="flex items-start gap-3">
-                    <i class="fas fa-star text-yellow-500 mt-1"></i>
-                    <div>
-                        <strong class="block text-gray-900">Predictable Absorption</strong>
-                        <span class="text-gray-600">Absorption begins as a loss of tensile strength followed by loss of mass.</span>
-                    </div>
-                </li>
-                <li class="flex items-start gap-3">
-                    <i class="fas fa-star text-yellow-500 mt-1"></i>
-                    <div>
-                        <strong class="block text-gray-900">Smooth Passage</strong>
-                        <span class="text-gray-600">Coated surface ensures smooth tissue passage and easy knot tying.</span>
-                    </div>
-                </li>
-                <li class="flex items-start gap-3">
-                    <i class="fas fa-star text-yellow-500 mt-1"></i>
-                    <div>
-                        <strong class="block text-gray-900">Secure Knotting</strong>
-                        <span class="text-gray-600">Excellent knot security and easy handling.</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </main>
-
-    <footer class="bg-gray-900 text-white py-12 px-4 mt-12">
-        <div class="max-w-7xl mx-auto text-center">
-            <p>&copy; 2024 V5 Medical LTD. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
+    <div id="google_translate_element" class="fixed top-4 right-4 z-50"></div>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        // Loader Failsafe
+        window.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('loader');
+            if(loader) setTimeout(() => { loader.style.opacity = '0'; setTimeout(() => loader.style.display = 'none', 500); }, 100);
+        });
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active', 'border-b-3', 'text-blue-600'));
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+            // Show selected content
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>

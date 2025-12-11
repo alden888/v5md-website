@@ -1,11 +1,15 @@
-# robots.txt for V5 Medical LTD
+# Apply to all search engine bots (Google, Bing, Baidu, Yandex, etc.)
 User-agent: *
+
+# Allow crawling of the entire site
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
-# Sitemap location
+# Allow crawling of images and PDFs (Important for B2B catalogs)
+Allow: /images/
+Allow: /pdf/
+
+# Block specific Cloudflare system paths (Save crawl budget)
+Disallow: /cdn-cgi/
+
+# Identify the Sitemap location (Crucial for SEO)
 Sitemap: https://v5md.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1

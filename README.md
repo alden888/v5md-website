@@ -47,7 +47,8 @@ This website is deployed on Cloudflare Pages connected to GitHub.
 
 Auto-deployment: Any push to the main branch will automatically deploy to https://v5md.com.
 
-🔄 How to Update
+
+## 🔄 How to Update
 1. Clone the repository:
 git clone [https://github.com/alden888/v5md.git](https://github.com/alden888/v5md.git)
 cd v5md
@@ -64,10 +65,11 @@ cd v5md
 
 4. Wait for Build: Cloudflare Pages will automatically detect the change and deploy the new version in 1-2 minutes.
 
-📞 Contact
+## 📞 Contact
 WhatsApp: +44 078 9504 7944
 Email: sales@v5md.com
 Website: https://v5md.com
 
-📝 License
+## 📝 License
 © 2024 V5 Medical LTD. All rights reserved.
+

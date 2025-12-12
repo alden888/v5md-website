@@ -1,0 +1,53 @@
+<!-- header.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 基本SEO信息 -->
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}">
+    <meta name="keywords" content="{{ page_keywords }}">
+    <meta name="author" content="V5 Medical LTD">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical标签 -->
+    <link rel="canonical" href="https://v5md.com/{{ current_page }}">
+
+    <!-- OpenGraph标签 -->
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page_description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://v5md.com/{{ current_page }}">
+    <meta property="og:image" content="https://v5md.com/images/v5medlogo.png">
+    <meta property="og:site_name" content="V5 Medical LTD">
+
+    <!-- Schema结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "V5 Medical LTD",
+      "url": "https://v5md.com",
+      "logo": "https://v5md.com/images/v5medlogo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44-078-9504-7944",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 168, Luying Road",
+        "addressLocality": "Kunshan",
+        "addressRegion": "Jiangsu",
+        "postalCode": "215300",
+        "addressCountry": "CN"
+      }
+    }
+    </script>
+
+    <!-- 其他头部资源 -->
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>

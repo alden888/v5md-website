@@ -331,12 +331,15 @@
                 </div>
 
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="font-semibold hover:text-blue-200 transition">Home</a>
-                    <a href="about.html" class="font-semibold text-white border-b-2 border-white transition">About Us</a>
-                    <a href="catalog.html" class="font-semibold hover:text-blue-200 transition">Products</a>
-                    <a href="blog.html" class="font-semibold hover:text-blue-200 transition">Blog</a>
-                    <a href="contact.html" class="font-semibold hover:text-blue-200 transition">Contact</a>
-                    <a href="https://wa.me/447895047944" target="_blank" class="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-full font-semibold transition flex items-center gap-2">
+                    <a href="index.html" class="nav-link font-semibold text-blue-900 transition">Home</a>
+                    <a href="about.html" class="nav-link font-semibold text-gray-600 hover:text-blue-900 transition">About Us</a>
+                    <a href="catalog.html" class="nav-link font-semibold text-gray-600 hover:text-blue-900 transition">Products</a>
+                    <a href="blog.html" class="nav-link font-semibold text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700">Blog</a>
+                    <!-- Fixed Contact link to point to contact.html -->
+                    <a href="contact.html" class="nav-link font-semibold text-gray-600 hover:text-blue-900 transition">Contact</a>
+                    <a href="https://wa.me/447895047944" target="_blank" rel="noopener noreferrer" 
+                       class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-semibold transition flex items-center gap-2" 
+                       onclick="trackWhatsAppClick()">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>

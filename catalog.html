@@ -65,41 +65,6 @@
             font-weight: 600;
         }
         
-        /* 产品详情模态框 */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 90%;
-            max-width: 1200px;
-            max-height: 90vh;
-            overflow-y: auto;
-            border-radius: 12px;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close:hover, .close:focus {
-            color: black;
-            text-decoration: none;
-        }
-        
         /* 平滑滚动 */
         html {
             scroll-behavior: smooth;
@@ -151,6 +116,26 @@
         }
         .lang-switcher:hover .lang-dropdown {
             display: block;
+        }
+        
+        /* 产品链接样式 */
+        .product-link {
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1e40af;
+            transition: width 0.3s ease;
+        }
+        .product-link:hover::after {
+            width: 100%;
         }
     </style>
 </head>
@@ -417,7 +402,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-PGA</span>
-                                    <button onclick="showProductDetail('pga')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=pga" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +427,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-PGLA</span>
-                                    <button onclick="showProductDetail('pgla')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=pgla" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -467,7 +452,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-CC</span>
-                                    <button onclick="showProductDetail('catgut')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=catgut" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -493,7 +478,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-SK</span>
-                                    <button onclick="showProductDetail('silk')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=silk" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -518,7 +503,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-NL</span>
-                                    <button onclick="showProductDetail('nylon')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=nylon" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -543,7 +528,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-PM</span>
-                                    <button onclick="showProductDetail('polypropylene')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=polypropylene" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -569,7 +554,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-SB</span>
-                                    <button onclick="showProductDetail('blade')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=blade" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -594,7 +579,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-DS</span>
-                                    <button onclick="showProductDetail('scalpel')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=scalpel" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -619,7 +604,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-BL</span>
-                                    <button onclick="showProductDetail('lancet')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=lancet" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -645,7 +630,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-GS</span>
-                                    <button onclick="showProductDetail('gauze-swab')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=gauze-swab" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -670,7 +655,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-GB</span>
-                                    <button onclick="showProductDetail('gauze-ball')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=gauze-ball" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -695,7 +680,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-GP</span>
-                                    <button onclick="showProductDetail('abdominal-pad')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=abdominal-pad" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -721,7 +706,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-MK</span>
-                                    <button onclick="showProductDetail('mask')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=mask" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -746,7 +731,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-SG</span>
-                                    <button onclick="showProductDetail('gown')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=gown" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -771,7 +756,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-PC</span>
-                                    <button onclick="showProductDetail('coverall')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=coverall" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -797,7 +782,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-UPK</span>
-                                    <button onclick="showProductDetail('surgical-pack')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=surgical-pack" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -823,7 +808,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-SY3P</span>
-                                    <button onclick="showProductDetail('syringe')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=syringe" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -848,7 +833,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-DGSY</span>
-                                    <button onclick="showProductDetail('dental-syringe')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=dental-syringe" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -873,7 +858,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-BTS</span>
-                                    <button onclick="showProductDetail('beauty-syringe')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=beauty-syringe" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -899,7 +884,7 @@
                                 </div>
                                 <div class="mt-auto flex items-center justify-between border-t pt-3">
                                     <span class="text-xs font-mono text-gray-400">Cat.# NQ-VIF</span>
-                                    <button onclick="showProductDetail('infusion')" class="text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</button>
+                                    <a href="product-detail.html?product=infusion" class="product-link text-sm font-bold text-blue-600 hover:text-blue-800">Details &rarr;</a>
                                 </div>
                             </div>
                         </div>
@@ -1131,16 +1116,6 @@
         </div>
     </footer>
 
-    <!-- 产品详情模态框 -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modalContent" class="p-4">
-                <!-- 产品详情内容将通过JavaScript动态加载 -->
-            </div>
-        </div>
-    </div>
-
     <script>
         // 页面加载完成后执行
         window.addEventListener('DOMContentLoaded', () => {
@@ -1270,295 +1245,6 @@
         function resetFilters() {
             searchInput.value = '';
             filterCategory('all', document.querySelector('.category-link'));
-        }
-
-        // 产品详情模态框
-        const modal = document.getElementById('productModal');
-        const span = document.getElementsByClassName('close')[0];
-        const modalContent = document.getElementById('modalContent');
-
-        // 关闭模态框
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // 点击模态框外部关闭
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        // 产品详情数据
-        const productDetails = {
-            'pga': {
-                title: 'PGA Absorbable Suture',
-                chinese: 'PGA可吸收缝合线',
-                image: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=500',
-                features: [
-                    'Material: Polyglycolic Acid (PGA)',
-                    'Structure: Braided',
-                    'Color: Violet',
-                    'Absorption Time: 60-90 days',
-                    'Packing: 12pcs/box, 100boxes/carton',
-                    'Certifications: CE, ISO 13485'
-                ],
-                applications: [
-                    'General soft tissue approximation',
-                    'Skin closure',
-                    'Oral and maxillofacial surgery',
-                    'Obstetrics and gynecology'
-                ],
-                specifications: [
-                    'Sizes: 3/0, 2/0, 0, 1, 2',
-                    'Length: 75cm, 150cm',
-                    'Needle Type: Round or cutting',
-                    'Sterilization: EO gas'
-                ],
-                packing: '12pcs/box, 100boxes/carton'
-            },
-            'pgla': {
-                title: 'PGLA Absorbable Suture',
-                chinese: 'PGLA可吸收缝合线',
-                image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500',
-                features: [
-                    'Material: Polyglactin 910 (PGLA)',
-                    'Structure: Braided',
-                    'Color: Violet',
-                    'Absorption Time: 90-120 days',
-                    'Packing: 12pcs/box, 100boxes/carton',
-                    'Certifications: CE, ISO 13485'
-                ],
-                applications: [
-                    'Deep tissue approximation',
-                    'Tendon repair',
-                    'Plastic and reconstructive surgery',
-                    'Cardiovascular surgery'
-                ],
-                specifications: [
-                    'Sizes: 4/0, 3/0, 2/0, 0, 1',
-                    'Length: 75cm, 150cm',
-                    'Needle Type: Round or cutting',
-                    'Sterilization: EO gas'
-                ],
-                packing: '12pcs/box, 100boxes/carton'
-            },
-            'catgut': {
-                title: 'Chromic Catgut Suture',
-                chinese: '铬制肠线',
-                image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=500',
-                features: [
-                    'Material: Natural sheep gut',
-                    'Treatment: Chromium salt treated',
-                    'Structure: Braided',
-                    'Color: Brown',
-                    'Absorption Time: 60-90 days',
-                    'Packing: 12pcs/box, 100boxes/carton',
-                    'Certifications: CE, ISO 13485'
-                ],
-                applications: [
-                    'Ophthalmic surgery',
-                    'ENT surgery',
-                    'Oral surgery',
-                    'Urological surgery'
-                ],
-                specifications: [
-                    'Sizes: 6/0, 5/0, 4/0, 3/0',
-                    'Length: 75cm',
-                    'Needle Type: Round',
-                    'Sterilization: EO gas'
-                ],
-                packing: '12pcs/box, 100boxes/carton'
-            },
-            'silk': {
-                title: 'Silk Braided Suture',
-                chinese: '真丝编织缝合线',
-                image: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=500',
-                features: [
-                    'Material: Natural silk',
-                    'Structure: Braided',
-                    'Color: Black',
-                    'Absorption: Non-absorbable',
-                    'Packing: 12pcs/box, 100boxes/carton',
-                    'Certifications: CE, ISO 13485'
-                ],
-                applications: [
-                    'Skin closure',
-                    'Oral and maxillofacial surgery',
-                    'Ophthalmic surgery',
-                    'Plastic surgery'
-                ],
-                specifications: [
-                    'Sizes: 5/0, 4/0, 3/0, 2/0, 0',
-                    'Length: 75cm, 150cm',
-                    'Needle Type: Round or cutting',
-                    'Sterilization: EO gas'
-                ],
-                packing: '12pcs/box, 100boxes/carton'
-            },
-            'syringe': {
-                title: 'Disposable Syringes',
-                chinese: '一次性注射器',
-                image: 'https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?w=500',
-                features: [
-                    'Material: Medical grade PP',
-                    'Structure: 3-part (barrel, plunger, stopper)',
-                    'Luer: Slip or Lock',
-                    'Capacity: 1ml-60ml',
-                    'Packing: 100pcs/box, 10boxes/carton',
-                    'Certifications: CE, ISO 13485'
-                ],
-                applications: [
-                    'Subcutaneous injection',
-                    'Intramuscular injection',
-                    'Intravenous injection',
-                    'Drug preparation'
-                ],
-                specifications: [
-                    'Sizes: 1ml, 2ml, 5ml, 10ml, 20ml, 50ml, 60ml',
-                    'Needle: 21G, 22G, 23G, 25G optional',
-                    'Graduation: Clear and easy to read',
-                    'Sterilization: EO gas'
-                ],
-                packing: '100pcs/box, 10boxes/carton'
-            },
-            'gauze-swab': {
-                title: 'Gauze Swabs',
-                chinese: '纱布片',
-                image: 'https://images.unsplash.com/photo-1583947581924-860b8b98299d?w=500',
-                features: [
-                    'Material: 100% cotton',
-                    'Mesh: 40S, 32S, 21S',
-                    'Sizes: Multiple sizes available',
-                    'Ply: 8ply, 12ply, 16ply, 24ply',
-                    'X-Ray: Optional',
-                    'Packing: Various packaging options',
-                    'Certifications: CE, ISO 13485'
-                ],
-                applications: [
-                    'Wound care',
-                    'Surgical swabbing',
-                    'Medication application',
-                    'General dressing'
-                ],
-                specifications: [
-                    'Sizes: 5×5cm, 7.5×7.5cm, 10×10cm, 15×15cm, 20×20cm',
-                    'Ply: 8, 12, 16, 24 layers',
-                    'Mesh: 40S, 32S, 21S',
-                    'Sterilization: EO gas or gamma'
-                ],
-                packing: '1P, 2P, 5P, 10P, 20P, 50P, 100P/box'
-            },
-            'mask': {
-                title: 'Surgical Face Masks',
-                chinese: '医用口罩',
-                image: 'https://images.unsplash.com/photo-1582003492749-3d5d85b8e947?w=500',
-                features: [
-                    'Structure: 3-ply protection',
-                    'Filtration: BFE≥98%',
-                    'Material: PP non-woven + meltblown + PP non-woven',
-                    'Earloops: Elastic',
-                    'Colors: Blue, White',
-                    'Certifications: CE, ISO 13485'
-                ],
-                applications: [
-                    'Medical protection',
-                    'Daily protection',
-                    'Surgical protection',
-                    'Public health'
-                ],
-                specifications: [
-                    'Size: 17.5×9.5cm',
-                    'Earloops: Elastic',
-                    'Nose Clip: Moldable',
-                    'Sterilization: EO gas'
-                ],
-                packing: '50pcs/box, 20boxes/carton'
-            },
-            'gown': {
-                title: 'Surgical Gowns',
-                chinese: '手术衣',
-                image: 'https://images.unsplash.com/photo-1584634731339-252c581abfc5?w=500',
-                features: [
-                    'Material: SMS, SMMS, SSMMS',
-                    'Weight: 30-45gsm',
-                    'Structure: Reinforced',
-                    'Protection Level: AAMI Level 3',
-                    'Sizes: M, L, XL, XXL',
-                    'Certifications: CE, ISO 13485, EN13795'
-                ],
-                applications: [
-                    'Operating room protection',
-                    'Infectious disease protection',
-                    'Intensive care',
-                    'Isolation protection'
-                ],
-                specifications: [
-                    'Material: SMS/SMMS/SSMMS',
-                    'Weight: 30-45gsm',
-                    'Cuffs: Knitted',
-                    'Neck: Tie/Velcro',
-                    'Waist: Four ties',
-                    'Sterilization: EO gas'
-                ],
-                packing: '1pc/bag, 50pcs/carton'
-            }
-        };
-
-        // 显示产品详情
-        function showProductDetail(productId) {
-            const product = productDetails[productId];
-            if (!product) return;
-
-            let content = `
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <img src="${product.image}" alt="${product.title}" class="w-full h-auto rounded-lg shadow-lg">
-                    </div>
-                    <div>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-2">${product.title}</h2>
-                        <p class="text-gray-600 mb-6">${product.chinese}</p>
-                        
-                        <div class="mb-6">
-                            <h3 class="font-bold text-lg mb-3 text-blue-900">Features</h3>
-                            <ul class="space-y-2">
-                                ${product.features.map(feature => `<li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i><span>${feature}</span></li>`).join('')}
-                            </ul>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="font-bold text-lg mb-3 text-blue-900">Applications</h3>
-                            <ul class="space-y-2">
-                                ${product.applications.map(app => `<li class="flex items-start gap-2"><i class="fas fa-stethoscope text-blue-500 mt-1"></i><span>${app}</span></li>`).join('')}
-                            </ul>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <h3 class="font-bold text-lg mb-3 text-blue-900">Specifications</h3>
-                            <ul class="space-y-2">
-                                ${product.specifications.map(spec => `<li class="flex items-start gap-2"><i class="fas fa-ruler-combined text-purple-500 mt-1"></i><span>${spec}</span></li>`).join('')}
-                            </ul>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="font-bold text-lg mb-3 text-blue-900">Packing</h3>
-                            <p class="flex items-center gap-2"><i class="fas fa-box text-orange-500"></i> ${product.packing}</p>
-                        </div>
-                        
-                        <div class="mt-8 flex gap-4 flex-wrap">
-                            <a href="https://wa.me/447895047944?text=I want to inquire about ${product.title}" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg transition flex items-center gap-2">
-                                <i class="fab fa-whatsapp"></i> WhatsApp Inquiry
-                            </a>
-                            <a href="mailto:sales@v5md.com?subject=Inquiry: ${product.title}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg transition flex items-center gap-2">
-                                <i class="fas fa-envelope"></i> Send Email
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            modalContent.innerHTML = content;
-            modal.style.display = "block";
         }
 
         // 平滑滚动

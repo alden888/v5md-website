@@ -139,6 +139,44 @@
             font-weight: bold;
             line-height: 1;
         }
+
+        /* Trust indicators styling */
+        .trust-indicators {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Floating buttons */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 
@@ -379,6 +417,24 @@
         </div>
     </section>
 
+    <!-- 移动了"Ready for Your Next Order?"部分到这里 -->
+    <section class="py-8 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <p class="text-2xl font-bold text-white mb-4">Ready for Your Next Order?</p>
+                <div class="trust-indicators">
+                    <div class="flex flex-wrap justify-center gap-6 items-center text-blue-200 text-sm md:text-base">
+                        <span class="flex items-center gap-2"><i class="fas fa-globe-americas text-blue-500"></i> We deliver to 40+ countries</span>
+                        <span class="hidden md:inline text-gray-600">|</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-certificate text-green-500"></i> ISO/CE/FDA Certified</span>
+                        <span class="hidden md:inline text-gray-600">|</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-shipping-fast text-yellow-500"></i> Fast Shipping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-16 bg-blue-50 border-t border-blue-100">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-blue-900 mb-12">Cooperation Process</h2>
@@ -497,24 +553,26 @@
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 pt-8 mt-8">
-                <div class="text-center">
-                    <p class="text-2xl font-bold text-white mb-4">Ready for Your Next Order?</p>
-                    <div class="flex flex-wrap justify-center gap-6 items-center text-blue-200 text-sm md:text-base">
-                        <span class="flex items-center gap-2"><i class="fas fa-globe-americas text-blue-500"></i> We deliver to 40+ countries</span>
-                        <span class="hidden md:inline text-gray-600">|</span>
-                        <span class="flex items-center gap-2"><i class="fas fa-certificate text-green-500"></i> ISO/CE/FDA Certified</span>
-                        <span class="hidden md:inline text-gray-600">|</span>
-                        <span class="flex items-center gap-2"><i class="fas fa-shipping-fast text-yellow-500"></i> Fast Shipping</span>
-                    </div>
-                </div>
-            </div>
+            <!-- 移除了原来的"Ready for Your Next Order?"部分，已移动到上面的位置 -->
             
             <div class="text-center mt-8 text-sm text-gray-500">
                 <p>© 2025 V5 Medical LTD. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- 浮动按钮 - 右下角添加 -->
+    <a href="https://wa.me/447895047944" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
+        <div class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </div>
+    </a>
+
+    <button id="back-to-top" class="back-to-top" title="Back to top">
+        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue-700 transition">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </button>
 
     <script src="js/main.js"></script>
     
@@ -532,6 +590,24 @@
             const loader = document.getElementById('loader');
             if(loader) loader.style.display = 'none';
         }, 2000);
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
     
     <div id="google_translate_element" class="fixed top-4 right-4 z-50"></div>

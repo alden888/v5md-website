@@ -1,51 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
+  <!-- Homepage - Highest priority -->
   <url>
     <loc>https://v5md.com/</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://v5md.com/images/v5medlogo.png</image:loc>
+      <image:caption>V5 Medical LTD Logo</image:caption>
+      <image:title>V5 Medical LTD - Global Medical Supplier</image:title>
+    </image:image>
   </url>
 
+  <!-- Product Catalog -->
   <url>
     <loc>https://v5md.com/catalog.html</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Product Categories -->
+  <url>
+    <loc>https://v5md.com/catalog.html#sutures</loc>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://v5md.com/catalog.html#packs</loc>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://v5md.com/catalog.html#syringes</loc>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Us -->
   <url>
     <loc>https://v5md.com/about.html</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Contact Us -->
   <url>
     <loc>https://v5md.com/contact.html</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog -->
   <url>
     <loc>https://v5md.com/blog.html</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog Posts (example entries) -->
+  <url>
+    <loc>https://v5md.com/blog.html# london-hospital-shipment</loc>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://v5md.com/blog.html#dubai-customer-testimonial</loc>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Product Detail Page -->
   <url>
     <loc>https://v5md.com/product-detail.html</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Privacy Policy -->
   <url>
     <loc>https://v5md.com/privacy.html</loc>
-    <lastmod>2024-12-10</lastmod>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Additional important pages -->
+  <url>
+    <loc>https://v5md.com/faq.html</loc>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://v5md.com/terms.html</loc>
+    <lastmod>2024-12-10T12:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

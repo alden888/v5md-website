@@ -68,6 +68,51 @@
         <img src="images/quality/iso13485-2016.jpg" class="h-10" alt="ISO 13485" />
         <img src="images/quality/fda.jpg" class="h-10" alt="FDA" />
       `;
+
+      renderRelatedProducts(product);
+    }
+      setSEO(product);
+
+      document.getElementById('breadcrumb-category').textContent = product.category;
+      document.getElementById('breadcrumb-category').href = `catalog.html?category=${encodeURIComponent(product.category)}`;
+      document.getElementById('breadcrumb-product').textContent = product.name;
+
+      document.getElementById('product-image').src = product.images?.[0] || 'images/products/default-product.jpg';
+      document.getElementById('product-name').textContent = product.name;
+      document.getElementById('product-description').textContent = product.description || '';
+
+      const certContainer = document.getElementById('certifications');
+      certContainer.innerHTML = `
+        <img src="images/quality/ce-mark.png" class="h-10" alt="CE" />
+        <img src="images/quality/iso13485-2016.jpg" class="h-10" alt="ISO 13485" />
+        <img src="images/quality/fda.jpg" class="h-10" alt="FDA" />
+      `;
+    }
+
+    function renderRelatedProducts(product) {
+      const container = document.getElementById('related-products');
+      if (!container) return;
+
+      const related = Object.values(finalProductDatabase)
+        .filter(p => p.category === product.category && p.id !== product.id)
+        .slice(0, 4);
+
+      if (related.length === 0) {
+        container.innerHTML = '<p class="text-gray-500">No related products available.</p>';
+        return;
+      }
+
+      container.innerHTML = related.map(p => `
+        <div class="bg-white rounded-xl shadow-sm border hover:shadow-lg transition overflow-hidden">
+          <div class="h-40 bg-gray-100">
+            <img src="${p.images?.[0] || 'images/products/default-product.jpg'}" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold text-sm mb-2">${p.name}</h3>
+            <a href="product-detail.html?product=${p.id}" class="text-blue-600 font-semibold text-sm">View Details →</a>
+          </div>
+        </div>
+      `).join('');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -124,6 +169,13 @@
       </div>
     </div>
 
+        
+      <!-- Related Products -->
+      <section class="mt-16 col-span-full">
+        <h2 class="text-2xl font-bold mb-6">Related Products</h2>
+        <div id="related-products" class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+      </section>
+
   </main>
 
   <!-- Footer -->
@@ -135,3 +187,4 @@
 
 </body>
 </html>
+

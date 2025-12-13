@@ -169,73 +169,49 @@ tailwindcss -i ./css/style.css -o ./css/output.css --watch
 
 
 ```
-v5md/
-
-├── index.html              # 首页 (Home - Main Entry)
-
-├── about.html              # 关于我们 (Corporate Culture & Profile)
-
-├── catalog.html            # 产品目录 (Product Categories & Filtering)
-
-├── product-detail.html     # 产品详情模板 (Specs & Details Template)
-
-├── quality.html            # 质量管理 (ISO/CE/FDA Certifications)
-
-├── blog.html               # 博客与新闻 (News & Updates)
-
-├── contact.html            # 联系我们 (Inquiry Form & Info)
-
-├── privacy.html            # 隐私政策 (Privacy Policy)
-
-│
-
-├── css/                    # 样式文件夹
-
-│   ├── style.css           # 全站通用样式 (Tailwind extensions)
-
-│   └── output.css          # Generated Tailwind CSS (if using CLI)
-
-│
-
-├── js/                     # 脚本文件夹
-
-│   └── main.js             # 核心交互逻辑 (Nav, Loader, Translate)
-
-│
-
-├── images/                 # 图片资源文件夹
-
-│   ├── icons/              # Favicon 等图标
-
-│   ├── products/           # 产品高清图
-
-│   ├── v5logo.png          # 导航栏 Logo
-
-│   ├── v5medlogo.png       # Hero 区域大 Logo
-
-│   └── hero-bg.jpg         # 首页背景图
-
-│
-
-├── pdf/                    # 可下载文档
-
-│   ├── Catalog.pdf         # 产品目录
-
-│   ├── Dental-Kit.pdf      # 牙科产品套件
-
-│   └── Price-List.pdf      # 价格表
-
-│
-
-├── robots.txt              # 搜索引擎爬取规则
-
-├── sitemap.xml             # 网站地图 (SEO)
-
-├── \_headers                # Cloudflare 安全头配置
-
-├── \_redirects              # Cloudflare 路由重定向规则
-
-└── README.md               # 项目说明文档
+v5md/​
+├── index.html              # 首页​
+├── about.html              # 关于我们​
+├── catalog.html            # 产品目录​
+├── product-detail.html     # 产品详情模板​
+├── quality.html            # 质量管理​
+├── blog.html               # 博客与新闻​
+├── contact.html            # 联系我们​
+├── privacy.html            # 隐私政策​
+├── header.html             # 头部模板 ✅ 添加到结构中​
+│​
+├── css/​
+│   ├── style.css           # 自定义样式​
+│   └── vendor/             # 第三方CSS（如Font Awesome）​
+│​
+├── js/​
+│   ├── main.js             # 核心交互逻辑​
+│   └── vendor/             # 第三方JS库​
+│​
+├── images/​
+│   ├── icons/              # 图标​
+│   ├── products/           # 产品图片​
+│   ├── blog/               # 博客图片 ✅ 新增​
+│   ├── about/              # 关于我们图片 ✅ 新增​
+│   ├── quality/            # 质量管理认证图片 ✅ 新增​
+│   ├── v5logo.png​
+│   ├── v5medlogo.png​
+│   └── hero-bg.jpg​
+│​
+├── pdf/​
+│   ├── catalog/            # 产品目录PDF​
+│   ├── quotations/         # 报价单PDF​
+│   └── certificates/       # 认证证书PDF ✅ 新增​
+│​
+├── assets/                 # 静态资源 ✅ 新增​
+│   ├── videos/             # 视频文件​
+│   └── documents/          # 其他文档​
+│​
+├── robots.txt​
+├── sitemap.xml​
+├── _headers​
+├── _redirects​
+└── README.md
 ```
 
 
